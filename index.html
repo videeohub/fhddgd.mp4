@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEY</title>
+    <script>
+        // Anti Inspect Element & Shortcut
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey && (event.key === "u" || event.key === "U" ||
+                                  event.key === "s" || event.key === "S" ||
+                                  event.key === "c" || event.key === "C" ||
+                                  event.shiftKey && (event.key === "i" || event.key === "I" ||
+                                                     event.key === "j" || event.key === "J"))) {
+                event.preventDefault();
+            }
+            if (event.keyCode === 123) { // F12
+                event.preventDefault();
+            }
+        });
+
+        // Disable Right Click
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+        });
+
+        function redirectAd() {
+            document.getElementById("status").innerHTML = "Please wait 10 seconds...";
+            setTimeout(function () {
+                let adsterraURL = atob("aHR0cHM6Ly9iYWNrcGFja2hhbnMuY29tL3lod3hpcTByaTQ/a2V5PWE5N2Q0ZGNiMTlhYTE1ODE3OGExMmMzNzQzNTVhNjMz");
+                window.location.href = adsterraURL;
+            }, 10000); // Delay 10 detik
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Special Offer - Click Below!</h2>
+    <p>Click the banner below and wait 10 seconds for the best deals!</p>
+    <a onclick="redirectAd()">
+        <img src="https://i.imgur.com/lbizztn.jpeg" alt="Click Here">
+    </a>
+    <p id="status"></p>
+    <br>
+    <button onclick="window.location.href='https://cdn.videy.co'">Watch Video</button>
+
+    <!-- Histats Tracking -->
+    <script type="text/javascript">
+        var _Hasync = _Hasync || [];
+        _Hasync.push(['Histats.start', '1,4922497,4,0,0,0,00010000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+            var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+            hs.src = '//s10.histats.com/js15_as.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+    <noscript>
+        <a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4922497&101" alt="stats" border="0"></a>
+    </noscript>
+</body>
+</html>
